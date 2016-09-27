@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Falcon WebSocket Message</title>
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/falcon.js"></script>
+</head>
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being enabled. Please enable Javascript and reload this page!</h2></noscript>
+	<form>
+		<div>
+			<label>WebSocket connection:</label>
+			<button id="connect" type="submit">Connect</button>
+			<button id="disconnect" type="submit" disabled="disabled">Disconnect</button>
+		</div>
+	</form>
+	<form>
+		<div>
+			<label>Enter your name</label>
+			<input type="text" id="name">
+		</div>
+		<div>
+			<label>Enter message for Falcon</label>
+			<input type="text" id="message">
+		</div>
+		<button id="send" type="submit">Send</button>
+	</form>
+
+	<label>Sent messages:</label>
+	<table id="conversation">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Message</th>
+				<th>Received Time</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</body>
